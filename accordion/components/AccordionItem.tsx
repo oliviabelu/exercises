@@ -14,7 +14,14 @@ interface Props {
 const AccordionItem = ({ content }: Props) => {
   const [isExtended, setIsExtended] = useState(false);
   return (
-    <Box>
+    <Box
+      sx={{
+        marginBottom: "1rem",
+        borderBottom: "1px solid",
+        borderBottomColor: "primary.contrastText",
+        padding: "0 0 1rem 0",
+      }}
+    >
       <Box
         sx={{
           display: "flex",
@@ -22,7 +29,7 @@ const AccordionItem = ({ content }: Props) => {
           justifyContent: "space-between",
         }}
       >
-        <Typography>{content.title}</Typography>
+        <Typography sx={{ fontWeight: 600 }}>{content.title}</Typography>
         <Button
           onClick={() => setIsExtended(!isExtended)}
           sx={{

@@ -31,14 +31,27 @@ const AccordionWrapper = () => {
       sx={{
         bgcolor: "primary.light",
         borderRadius: 1,
-        padding: "1rem",
+        padding: "0 1.5rem",
         width: "62%",
-        height: "70%",
-        overflow: "hidden",
+        height: "77%",
+        overflow: "auto",
+        position: "relative",
       }}
     >
-      <Typography variant="h1">Mein Accordion</Typography>
-      <Typography>Zum Testen</Typography>
+      <Typography
+        variant="h1"
+        sx={{
+          marginBottom: "0.5rem",
+          position: "sticky",
+          top: 0,
+          bgcolor: "primary.light",
+          zIndex: 1,
+          padding: "1.5rem 0",
+        }}
+      >
+        Mein Accordion
+      </Typography>
+      <Typography sx={{ marginBottom: "1.5rem" }}>Zum Testen</Typography>
       {AccordionContent.map((item) => {
         return <AccordionItem key={item.title} content={item} />;
       })}
