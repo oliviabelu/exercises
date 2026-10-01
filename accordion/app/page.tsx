@@ -1,11 +1,19 @@
 import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
+import AccordionWrapper from "@/components/AccordionWrapper";
 import React from "react";
 
 const Home = () => {
   return (
-    <Box>
-      <Typography variant="h1">Home</Typography>
+    <Box
+      sx={{
+        width: "100vw",
+        height: "100vh",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
+      <AccordionWrapper />
     </Box>
   );
 };
