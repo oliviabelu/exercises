@@ -1,7 +1,9 @@
+"use client";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import React from "react";
 import AccordionItem from "./AccordionItem";
+import theme from "@/styles/theme";
 
 const AccordionWrapper = () => {
   const AccordionContent = [
